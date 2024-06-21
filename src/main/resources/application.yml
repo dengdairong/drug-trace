@@ -1,0 +1,65 @@
+server:
+  port: 8080
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package:  com.ddr.drugtrace.model
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.3.12:3306/drug-trace?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: ddr9001989719
+    druid:
+      initial-size: 5
+      min-idle: 5
+      max-active: 20
+      max-wait: 60000
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+      filter: stat
+      connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+      validation-query: SELECT 1 FROM DUAL
+  session:
+    store-type: REDIS
+  redis:
+    host: 192.168.3.12
+    port: 6379
+    database: 0
+    password:
+    lettuce:
+      pool:
+        min-idle: 1
+        max-idle: 5
+        max-active: 5
+        max-wait: 1ms
+        shutdown-timeout: 100ms
+  main:
+    allow-circular-references: true
+  security:
+    whitelist: /auth/**,/user/register
+logging:
+  level:
+    root: INFO
+    com.ddr.drugtrace: debug
+  file:
+    name: /data/logs/drugtrace/drugtrace.log
+
+contract:
+  url: Http://127.0.0.1:7545
+#  public-key: 168bec19ffc4955798c360c7375b594ad07778d8d29591251fa41b5a8e9d26efec34bb8e6cafb0ba9133b555df4d3ee4abd532518be3baa8db126cd2ae468ffb
+#  private-key: cb71bd19b51201631608bd6e27d1b2957c5b3a7e6ee5b8ce42c9085011b9f275
+  private-key: 1607b4797079810a9f57c8cadf4790fabccd57f1c3579cd6959cbe324a21ed02
+#  contract-address: 0x21CfefB5D3aB0fb023dF3D688f64D76d1f4513A1
+  contract-address: '0x976ab18ED7304b107CaD091950bF6AEe067D64CE'
+
+
+
+

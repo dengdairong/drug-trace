@@ -1,0 +1,431 @@
+[
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_id",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "_drugStorageConditions",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_drugStorageLocation",
+				"type": "string"
+			}
+		],
+		"name": "accept",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_producer",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "_prouctionDataStr",
+				"type": "string"
+			}
+		],
+		"name": "addDrug",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_id",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_buyer",
+				"type": "uint256"
+			}
+		],
+		"name": "buy",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_id",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_dealer",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "_transportationStr",
+				"type": "string"
+			}
+		],
+		"name": "sale",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "drugs",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "producer",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "productionDate",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "productionDateStr",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "flow",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "transportationStr",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "dealer",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "drugAcceptanceTime",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "drugStorageConditions",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "drugStorageLocation",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "buyer",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "buyTime",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_userId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_id",
+				"type": "uint256"
+			}
+		],
+		"name": "getDrugCount",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_page",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_pageSize",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_userId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_id",
+				"type": "uint256"
+			}
+		],
+		"name": "getDrugs",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "producer",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "productionDate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "productionDateStr",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "flow",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "transportationStr",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "dealer",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "drugAcceptanceTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "drugStorageConditions",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "drugStorageLocation",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "buyer",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "buyTime",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct DrugTrace.Drug[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_id",
+				"type": "uint256"
+			}
+		],
+		"name": "getPayableDrugCount",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_page",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_pageSize",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_id",
+				"type": "uint256"
+			}
+		],
+		"name": "getPayableDrugs",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "producer",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "productionDate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "productionDateStr",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "flow",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "transportationStr",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "dealer",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "drugAcceptanceTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "drugStorageConditions",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "drugStorageLocation",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "buyer",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "buyTime",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct DrugTrace.Drug[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "payableDrugIdList",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "userIdToDrugIdList",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
